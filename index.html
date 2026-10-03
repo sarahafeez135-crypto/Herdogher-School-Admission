@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herdoher School | Student Admission</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <span class="brand-icon">H</span>
+            Herdoher School
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#admission">Admissions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <a href="#admission" class="btn btn-warning ms-lg-3">
+                Apply Now
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="hero-tag">WELCOME TO HERDOHER SCHOOL</span>
+
+                <h1>
+                    A Bright Future<br>
+                    Begins <span>Here!</span>
+                </h1>
+
+                <p class="hero-text">
+                    Give your child the confidence, knowledge and skills
+                    to achieve their dreams. Join the Herdoher School family
+                    and begin a wonderful learning journey.
+                </p>
+
+                <a href="#admission" class="btn btn-warning btn-lg">
+                    Start Admission
+                </a>
+                <a href="#about" class="btn btn-outline-light btn-lg ms-2">
+                    Learn More
+                </a>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>Quality</h3>
+                        <p>Education</p>
+                    </div>
+                    <div>
+                        <h3>Bright</h3>
+                        <p>Future</p>
+                    </div>
+                    <div>
+                        <h3>Great</h3>
+                        <p>Learning</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
+                        alt="Students learning in a classroom">
+                    <div class="image-note">
+                        <span>✦</span>
+                        Learning Today, Leading Tomorrow
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section section-padding" id="about">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-label">ABOUT OUR SCHOOL</span>
+            <h2>Welcome to <span>Herdoher School</span></h2>
+            <p>
+                A supportive environment where students can learn,
+                grow and discover their abilities.
+            </p>
+        </div>
+
+        <div class="row g-4 mt-3">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h4>Quality Education</h4>
+                    <p>
+                        We encourage students to develop knowledge,
+                        curiosity and a love for learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">👩‍🏫</div>
+                    <h4>Supportive Teachers</h4>
+                    <p>
+                        We aim to create a friendly learning environment
+                        where every student feels supported.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h4>Student Development</h4>
+                    <p>
+                        We value confidence, creativity, good manners
+                        and the personal growth of every child.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Admission Section -->
+<section class="admission-section section-padding" id="admission">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-label">ADMISSIONS OPEN</span>
+            <h2>Student <span>Admission Form</span></h2>
+            <p>
+                Complete the form below to submit an admission enquiry
+                to Herdoher School.
+            </p>
+        </div>
+
+        <div class="form-card">
+            <div class="form-top">
+                <div>
+                    <h3>Admission Application</h3>
+                    <p>Please enter the student's correct information.</p>
+                </div>
+                <div class="form-symbol">🎓</div>
+            </div>
+
+            <div id="formMessage" class="alert d-none" role="status"></div>
+
+            <form id="admissionForm">
+                <h5 class="form-heading">Student Information</h5>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="studentName" class="form-label">
+                            Student Full Name *
+                        </label>
+                        <input type="text" class="form-control"
+                               id="studentName" name="studentName"
+                               placeholder="Enter student's full name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="fatherName" class="form-label">
+                            Father's Name *
+                        </label>
+                        <input type="text" class="form-control"
+                               id="fatherName" name="fatherName"
+                               placeholder="Enter father's name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="dob" class="form-label">
+                            Date of Birth *
+                        </label>
+                        <input type="date" class="form-control"
+                               id="dob" name="dob" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="gender" class="form-label">
+                            Gender *
+                        </label>
+                        <select class="form-select" id="gender"
+                                name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="className" class="form-label">
+                            Applying for Class *
+                        </label>
+                        <select class="form-select" id="className"
+                                name="className" required>
+                            <option value="">Select class</option>
+                            <option>Playgroup</option>
+                            <option>Nursery</option>
+                            <option>Prep</option>
+                            <option>Class 1</option>
+                            <option>Class 2</option>
+                            <option>Class 3</option>
+                            <option>Class 4</option>
+                            <option>Class 5</option>
+                            <option>Class 6</option>
+                            <option>Class 7</option>
+                            <option>Class 8</option>
+                            <option>Class 9</option>
+                            <option>Class 10</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="previousSchool" class="form-label">
+                            Previous School
+                        </label>
+                        <input type="text" class="form-control"
+                               id="previousSchool" name="previousSchool"
+                               placeholder="Previous school (if any)">
+                    </div>
+                </div>
+
+                <hr class="form-divider">
+
+                <h5 class="form-heading">Parent / Guardian Information</h5>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">
+                            Phone Number *
+                        </label>
+                        <input type="tel" class="form-control"
+                               id="phone" name="phone"
+                               placeholder="03XXXXXXXXX"
+                               pattern="[0-9+\-\s()]{7,20}"
+                               title="Enter a valid phone number" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">
+                            Email Address
+                        </label>
+                        <input type="email" class="form-control"
+                               id="email" name="email"
+                               placeholder="example@email.com">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="address" class="form-label">
+                            Home Address *
+                        </label>
+                        <textarea class="form-control" id="address"
+                                  name="address" rows="3"
+                                  placeholder="Enter complete home address"
+                                  required></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="message" class="form-label">
+                            Additional Information
+                        </label>
+                        <textarea class="form-control" id="message"
+                                  name="message" rows="3"
+                                  placeholder="Any additional details (optional)"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-check mt-4">
+                    <input class="form-check-input" type="checkbox"
+                           id="confirmation" required>
+                    <label class="form-check-label" for="confirmation">
+                        I confirm that the information provided is correct.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-submit w-100 mt-4">
+                    Submit Admission Enquiry →
+                </button>
+
+                <p class="privacy-note">
+                    * Required fields. Please review your details before
+                    submitting the form.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section section-padding" id="contact">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <span class="section-label">GET IN TOUCH</span>
+                <h2>Have Questions About Admission?</h2>
+                <p>
+                    Contact Herdoher School for information about
+                    classes and the admission process.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <div class="contact-card">
+                    <h5>Herdoher School</h5>
+                    <p>📍 School address: Add your real address here</p>
+                    <p>📞 Phone: Add your school phone number</p>
+                    <p>✉️ Email: Add your school email address</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container text-center">
+        <h5>Herdoher School</h5>
+        <p>Learning Today, Leading Tomorrow.</p>
+        <p class="copyright">
+            © <span id="year"></span> Herdoher School. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
